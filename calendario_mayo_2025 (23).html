@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Fondo con imagen</title>
+  <style>
+    body {
+      background-image: url('https://www.organon.com/wp-content/uploads/sites/2/2021/06/standing-in-line-1.png?fit=4687%2C2870');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin: 0;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<html lang="es"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario OCAS de Integridad de Datos de Mayo 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 10pt;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .color-title span:nth-child(1) { color: #1B4298; }
+        .color-title span:nth-child(2) { color: #E20177; }
+        .color-title span:nth-child(3) { color: #54B948; }
+        .color-title span:nth-child(4) { color: #009DDC; }
+
+        table {
+            max-width: 900px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: yellow;
+            color: black;
+            text-align: center;
+        }
+
+        td {
+            height: 120px;
+            font-size: 10pt;
+            text-align: justify;
+        }
+
+        .color-azul-oscuro { background-color: #1B4298; color: white; }
+        .color-rosa { background-color: #E20177; color: white; }
+        .color-verde { background-color: #54B948; color: white; }
+        .color-azul { background-color: #009DDC; color: white; }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- Librerías para PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1 class="color-title">
+        <span>Calendario</span> <span>OCAS</span> <span>de Integridad de Datos</span> <span>de Mayo 2025</span>
+    </h1>
+
+    <div style="margin-bottom: 20px;">
+        <button onclick="descargarPDF()">Descargar PDF</button>
+        <button onclick="window.print()">Imprimir</button>
+    </div>
+
+    <table id="calendario">
+        <tr>
+            <th>Dom</th>
+            <th>Lun</th>
+            <th>Mar</th>
+            <th>Mié</th>
+            <th>Jue</th>
+            <th>Vie</th>
+            <th>Sáb</th>
+        </tr>
+        <tr>
+            <td class="color-azul"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="color-azul">1</td>
+            <td class="color-azul-oscuro">2<br>Integridad de Datos es la medida en que los datos son completos, consistentes y precisos a lo largo del ciclo de vida de los datos.</td>
+            <td class="color-azul">3</td>
+        </tr>
+        <tr>
+            <td class="color-azul">4</td>
+            <td class="color-rosa">5<br>El ciclo de vida de los datos o los documentos incluye las etapas de: Creación, ejecución, revisión, transferencia, almacenamiento y destrucción.</td>
+            <td class="color-verde">6<br>La distracción y la falta de atención en la ejecución.</td>
+            <td class="color-azul-oscuro">7<br>El dueño de los datos es el área que genera y usa los datos y es responsable de asegurar el cumplimiento de las etapas del ciclo de vida.</td>
+            <td class="color-rosa">8<br>Gobernanza de datos son todos los controles que aseguran la confiabilidad, consistencia y precisión de un registro durante todo su ciclo de vida.</td>
+            <td class="color-verde">9<br>Todos los registros en documentos en papel y electrónicos deben cumplir con los principios ALCOA+.</td>
+            <td class="color-azul">10</td>
+        </tr>
+        <tr>
+            <td class="color-azul">11</td>
+            <td class="color-azul-oscuro">12<br>Una falla crítica de Gobernanza de Datos es un evento que cuestiona los principios ALCOA sobre un registro electrónico o en papel:<br>1. Pérdida de datos antes de su periodo de retención.<br>2. Pérdida de documentos GMP.<br>3. Falsificación.<br>4. Registros posteriores a su ejecución (Backdating).<br>5. Datos prellenados en un registro GMP.</td>
+            <td class="color-rosa">13<br>Todos los registros deben realizarse con tinta azul indeleble.</td>
+            <td class="color-verde">14<br>Cuando hay un error en el registro de la fecha se debe corregir la fecha completa:<br>15-may-2023 ✘<br>15-may-2023 ✔</td>
+            <td class="color-azul-oscuro">15<br>Los registros siempre deben realizarse de manera oportuna y completa de acuerdo a la ejecución de las actividades.</td>
+            <td class="color-rosa">16<br>No está permitido el uso de post-it, hojas sueltas, papeles engrapados, etc., para el registro de datos GMP.</td>
+            <td class="color-azul">17</td>
+        </tr>
+        <tr>
+            <td class="color-azul">18</td>
+            <td class="color-verde">19<br>Todas las evidencias que se anexan a un documento GMP deben estar lacradas e incluir firma y fecha.</td>
+            <td class="color-azul-oscuro">20<br>Buenas prácticas de documentación sin principios ALCOA no es cumplimiento.</td>
+            <td class="color-rosa">21<br>Si un equipo genera impresiones en papel termosensible se debe generar y aprobar la copia fiel.</td>
+            <td class="color-verde">22<br>Los registros extemporáneos se deben justificar y contar con la evidencia de que la actividad fue realizada, colocando la fecha en que se realiza el registro y no la fecha en la que debió realizarse.</td>
+            <td class="color-azul-oscuro">23<br>Los únicos formatos de fecha permitidos en el sitio son:<br>DDMMMAAAA o DD-MMM-AAAA<br>No aplica para sistemas electrónicos validados.</td>
+            <td class="color-azul">24</td>
+        </tr>
+        <tr>
+            <td class="color-azul">25</td>
+            <td class="color-rosa">26<br>Si corriges un documento en papel y tiene documentos electrónicos, asegúrate que se realice la corrección en ambos documentos.</td>
+            <td class="color-verde">27<br>Cuando tengamos un espacio insuficiente para colocar información podemos hacer uso de llamadas.</td>
+            <td class="color-azul-oscuro">28<br>Las llamadas siempre son números consecutivos encerrados en un círculo y deben incluir firma y fecha de quien lo realiza. ①②③</td>
+            <td class="color-rosa">29<br>Al cancelar espacios sin utilizar debo asegurarme que se realicen de manera correcta, sin cancelar información que sí aplica y colocando firma y fecha.</td>
+            <td class="color-verde">30<br>Todos los registros deben ser firmados y fechados por la persona que realiza la actividad justo en el momento que lo realiza.</td>
+        </tr>
+    </table>
+
+    <script>
+        async function descargarPDF() {
+            const { jsPDF } = window.jspdf;
+            const calendario = document.querySelector("table");
+
+            const canvas = await html2canvas(calendario, { scale: 2 });
+            const imgData = canvas.toDataURL("image/png");
+
+            const pdf = new jsPDF("landscape", "pt", "a4");
+            const imgProps = pdf.getImageProperties(imgData);
+            const pdfWidth = pdf.internal.pageSize.getWidth();
+            const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+            pdf.addImage(imgData, "PNG", 20, 20, pdfWidth - 40, pdfHeight);
+            pdf.save("Calendario_Mayo_2025.pdf");
+        }
+    </script>
+    
+imagen-inferior-derecha {"Logo Juan Santana.png"
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 100px; /* Ajusta el tamaño según necesites */
+        z-index: 1000;
+}
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=0XBKSK_KA0qkdxy-aIMEr_NwbkFAA9FPm473U1oWsjFURTRaUlZOS0RNWk43UjMzNzNHSzRRTkROWC4u" target="_blank">
+        <img src="logo.png" alt="Logo OCAS" class="imagen-inferior-derecha">
+    </a>
+</body>
+</html>
